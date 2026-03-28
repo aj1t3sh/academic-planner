@@ -28,7 +28,6 @@ function Layout() {
       }`}
     >
 
-      {/* SIDEBAR */}
       {!isAuthPage && (
         <aside className="w-64 bg-white/70 backdrop-blur-xl shadow-xl p-6 flex flex-col">
           <h1 className="text-2xl font-bold text-indigo-600 mb-10">
