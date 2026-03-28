@@ -10,7 +10,7 @@ import SignupPage from "./pages/SignupPage";
 
 import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import { PlannerProvider } from "./context/PlannerContext"; // ✅ ADD THIS
+import { PlannerProvider } from "./context/PlannerContext"; 
 
 function Layout() {
   const location = useLocation();

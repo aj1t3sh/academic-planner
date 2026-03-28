@@ -21,19 +21,16 @@ function CoursesPage() {
   const currentCredits = semesterCredits[semesterLabel] || 0;
   const locked = isSemesterLocked(semesterNumber);
 
-  // 🔥 Collect completed course IDs
   const completedIds = Object.values(plannedCourses)
     .flat()
     .map(c => c.id);
 
-  // 🔍 Search + Semester Filter
   const semesterCourses = courses.filter(
     course =>
       course.semester === semesterNumber &&
       course.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // 🧠 Recommended Courses (prereq completed)
   const recommendedCourses = semesterCourses.filter(course =>
     course.prereq.every(id => completedIds.includes(id))
   );
@@ -45,7 +42,6 @@ function CoursesPage() {
         Academic Planner - Smart Planning
       </h2>
 
-      {/* YEAR + SEM SELECT */}
       <div className="flex flex-wrap gap-4 mb-6">
         <select
           value={selectedYear}
@@ -80,7 +76,6 @@ function CoursesPage() {
         />
       </div>
 
-      {/* SEM STATUS */}
       <div className="mb-6">
         {locked ? (
           <span className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">
@@ -93,7 +88,6 @@ function CoursesPage() {
         )}
       </div>
 
-      {/* CREDIT BAR */}
       <div className="mb-8">
         <p className="text-sm mb-2">
           Credits: {currentCredits} / {MAX_CREDITS_PER_SEM}
@@ -112,7 +106,6 @@ function CoursesPage() {
         </div>
       </div>
 
-      {/* 🔥 RECOMMENDED SECTION */}
       {recommendedCourses.length > 0 && (
         <div className="mb-10">
           <h3 className="text-xl font-semibold mb-4 text-green-600">

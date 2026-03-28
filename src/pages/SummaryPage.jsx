@@ -97,7 +97,6 @@ function SummaryPage() {
         </div>
       </div>
 
-      {/* ================= DEGREE PROGRESS ================= */}
       <div className="bg-white p-10 rounded-3xl shadow-2xl">
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
           <FaChartLine />
@@ -125,7 +124,6 @@ function SummaryPage() {
         )}
       </div>
 
-      {/* ================= SEMESTER BREAKDOWN ================= */}
       <div className="bg-white p-10 rounded-3xl shadow-2xl">
         <h2 className="text-2xl font-bold mb-8">
           Semester Credit Overview
