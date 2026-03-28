@@ -26,7 +26,6 @@ function LoginPage() {
         className="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md"
       >
 
-        {/* HEADER */}
         <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">
           Welcome Back 👋
         </h2>
@@ -34,7 +33,6 @@ function LoginPage() {
           Login to continue your journey
         </p>
 
-        {/* EMAIL */}
         <input
           type="email"
           placeholder="Email address"
@@ -42,7 +40,6 @@ function LoginPage() {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        {/* PASSWORD */}
         <input
           type="password"
           placeholder="Password"

@@ -103,7 +103,7 @@ function Layout() {
 function App() {
   return (
     <AuthProvider>
-      <PlannerProvider> {/* ✅ ADD THIS */}
+      <PlannerProvider> 
         <Layout />
       </PlannerProvider>
     </AuthProvider>
